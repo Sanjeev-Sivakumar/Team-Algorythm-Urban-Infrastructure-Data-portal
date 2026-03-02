@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Urban Infrastructure Portal</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.heat/dist/leaflet-heat.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">Urban Infrastructure Portal</div>
+            <div class="user-info" id="userInfo"></div>
+            <button class="btn btn-danger" onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Navigation</h3>
+            <div class="menu-item active" onclick="showView('dashboard')">Dashboard</div>
+            <div class="menu-item" onclick="showView('map')">Map & Heatmap</div>
+            <div class="menu-item" onclick="showView('assets')">Assets</div>
+            <div class="menu-item" onclick="showView('complaints')">Complaints</div>
+            <div class="menu-item" onclick="showView('maintenance')">Maintenance</div>
+            <div class="menu-item" onclick="showView('sla')">SLA Tracking</div>
+            <div class="menu-item" onclick="showView('analytics')">Analytics</div>
+        </div>
+
+        <div class="content-area">
+            <div id="dashboardView" class="view active">
+                <h2>Dashboard Overview</h2>
+                <div class="stats-grid" id="statsGrid"></div>
+                <div class="charts-container" id="chartsContainer"></div>
+            </div>
+
+            <div id="mapView" class="view">
+                <div class="map-controls">
+                    <button class="btn btn-primary" onclick="toggleHeatmap()">Toggle Heatmap</button>
+                    <button class="btn btn-primary" onclick="detectLocation()">My Location</button>
+                </div>
+                <div id="map" style="height: 600px; width: 100%; position: relative;"></div>
+                <div class="legend">
+                    <div class="legend-title">Map Legend</div>
+                    <div class="legend-item"><span class="dot" style="background:#10b981"></span>Assets (Green Markers)</div>
+                    <div class="legend-item"><span class="dot" style="background:#ef4444"></span>Complaints (Red Markers)</div>
+                    <div class="legend-item"><span class="dot" style="background:#f59e0b"></span>Maintenance (Orange)</div>
+                </div>
+            </div>
+
+            <div id="assetsView" class="view">
+                <div class="view-header">
+                    <h2>Infrastructure Assets</h2>
+                    <div>
+                        <button class="btn btn-secondary" onclick="exportData('assets', 'csv')" id="exportAssetsCsv" style="display:none;">Export CSV</button>
+                        <button class="btn btn-secondary" onclick="exportData('assets', 'pdf')" id="exportAssetsPdf" style="display:none;">Export PDF</button>
+                        <button class="btn btn-primary" onclick="showAddAssetModal()" id="addAssetBtn">Add Asset</button>
+                    </div>
+                </div>
+                <div id="assetsTable"></div>
+            </div>
+
+            <div id="complaintsView" class="view">
+                <div class="view-header">
+                    <h2>Complaints</h2>
+                    <div>
+                        <button class="btn btn-secondary" onclick="exportData('complaints', 'csv')" id="exportComplaintsCsv" style="display:none;">Export CSV</button>
+                        <button class="btn btn-secondary" onclick="exportData('complaints', 'pdf')" id="exportComplaintsPdf" style="display:none;">Export PDF</button>
+                        <button class="btn btn-primary" onclick="showAddComplaintModal()">Report Issue</button>
+                    </div>
+                </div>
+                <div id="complaintsTable"></div>
+            </div>
+
+            <div id="complaintDetailModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('complaintDetailModal')">&times;</span>
+                    <h3 id="complaintDetailTitle">Complaint Details</h3>
+                    <div id="complaintDetailContent"></div>
+                </div>
+            </div>
+
+            <div id="maintenanceView" class="view">
+                <div class="view-header">
+                    <h2>Maintenance Progress</h2>
+                    <div>
+                        <button class="btn btn-secondary" onclick="exportData('maintenance', 'csv')" id="exportMaintenanceCsv" style="display:none;">Export CSV</button>
+                        <button class="btn btn-secondary" onclick="exportData('maintenance', 'pdf')" id="exportMaintenancePdf" style="display:none;">Export PDF</button>
+                    </div>
+                </div>
+                <div id="maintenanceProgress"></div>
+                <div id="maintenanceTable"></div>
+            </div>
+
+            <div id="slaView" class="view">
+                <h2>SLA Monitoring</h2>
+                <div id="slaStats"></div>
+                <div id="slaTable"></div>
+            </div>
+
+            <div id="analyticsView" class="view">
+                <h2>Advanced Analytics</h2>
+                <div class="analytics-grid" id="analyticsGrid"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="assetModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('assetModal')">&times;</span>
+            <h3>Add New Asset</h3>
+            <form id="assetForm">
+                <div class="form-group">
+                    <label>Asset Name *</label>
+                    <input type="text" id="assetName" required>
+                </div>
+                <div class="form-group">
+                    <label>Type *</label>
+                    <select id="assetType" required>
+                        <option value="">Select Type</option>
+                        <option value="Road">Road</option>
+                        <option value="Bridge">Bridge</option>
+                        <option value="Water Supply">Water Supply</option>
+                        <option value="Electricity">Electricity</option>
+                        <option value="Sewage">Sewage</option>
+                        <option value="Street Light">Street Light</option>
+                        <option value="Park">Park</option>
+                        <option value="Building">Public Building</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Department *</label>
+                    <select id="assetDept" required>
+                        <option value="">Select Department</option>
+                        <option value="Public Works">Public Works</option>
+                        <option value="Water Department">Water Department</option>
+                        <option value="Electricity Board">Electricity Board</option>
+                        <option value="Sanitation">Sanitation</option>
+                        <option value="Transportation">Transportation</option>
+                        <option value="Parks & Recreation">Parks & Recreation</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Latitude *</label>
+                    <input type="number" step="any" id="assetLat" required>
+                </div>
+                <div class="form-group">
+                    <label>Longitude *</label>
+                    <input type="number" step="any" id="assetLng" required>
+                </div>
+                <button type="button" class="btn btn-secondary" onclick="useCurrentLocation('asset')">Use My Location</button>
+                <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">Add Asset</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="complaintModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('complaintModal')">&times;</span>
+            <h3>Report Issue</h3>
+            <form id="complaintForm">
+                <div class="form-group">
+                    <label>Issue Title *</label>
+                    <input type="text" id="complaintTitle" required>
+                </div>
+                <div class="form-group">
+                    <label>Description *</label>
+                    <textarea id="complaintDesc" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Asset Type *</label>
+                    <select id="complaintAssetType" required>
+                        <option value="">Select Asset Type</option>
+                        <option value="Road">Road</option>
+                        <option value="Bridge">Bridge</option>
+                        <option value="Water Supply">Water Supply</option>
+                        <option value="Electricity">Electricity</option>
+                        <option value="Sewage">Sewage</option>
+                        <option value="Street Light">Street Light</option>
+                        <option value="Park">Park</option>
+                        <option value="Building">Public Building</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Latitude *</label>
+                    <input type="number" step="any" id="complaintLat" required>
+                </div>
+                <div class="form-group">
+                    <label>Longitude *</label>
+                    <input type="number" step="any" id="complaintLng" required>
+                </div>
+                <button type="button" class="btn btn-secondary" onclick="useCurrentLocation('complaint')">Use My Location</button>
+                <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">Submit Complaint</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
