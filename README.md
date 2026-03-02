@@ -2,6 +2,9 @@
 
 A comprehensive web-based platform for managing urban infrastructure assets with GIS capabilities, real-time monitoring, complaint management, and role-based access control.
 
+### Drive link: 
+https://drive.google.com/drive/folders/1dTIa4cDRvD9-1R29gifrWcbBcHtbJCuq?usp=sharing
+
 ## Quick Start
 
 ### Prerequisites
