@@ -2,6 +2,9 @@
 
 Complete web-based platform for managing urban infrastructure with GIS, real-time monitoring, complaint management, and advanced ML-powered features.
 
+### Drive link: 
+https://drive.google.com/drive/folders/1dTIa4cDRvD9-1R29gifrWcbBcHtbJCuq?usp=sharing
+
 ## Quick Start
 
 ### 1. Database Setup
@@ -76,6 +79,17 @@ DB_USER=postgres
 DB_PASSWORD=your_password
 JWT_SECRET=your_secret_key
 ```
+
+## Screenshots (From Postman API and PostgreSQL)
+
+<img width="940" height="500" alt="image" src="https://github.com/user-attachments/assets/b38c07ad-8eb9-4fd2-80f7-87a688572958" />
+<img width="940" height="500" alt="image" src="https://github.com/user-attachments/assets/386ea15e-4f2a-4df1-916b-2ca3e84bac1b" />
+<img width="940" height="500" alt="image" src="https://github.com/user-attachments/assets/325a722c-ba3d-4960-9886-80c115712b97" />
+<img width="940" height="498" alt="image" src="https://github.com/user-attachments/assets/dd2ad416-9188-4f28-b178-e4559540fe51" />
+<img width="940" height="507" alt="image" src="https://github.com/user-attachments/assets/fdb18308-a1e3-4673-a4c0-a17901ac4aa8" />
+<img width="940" height="508" alt="image" src="https://github.com/user-attachments/assets/8671e9f4-8274-4183-8369-045897b075a9" />
+<img width="940" height="505" alt="image" src="https://github.com/user-attachments/assets/264b9459-af93-43b1-95bb-028ba7d809c7" />
+<img width="940" height="505" alt="image" src="https://github.com/user-attachments/assets/617649f8-11a7-4ab6-b55e-fb456facb507" />
 
 ---
 
