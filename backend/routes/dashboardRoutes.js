@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const dashboardController = require('../controllers/dashboardController');
-const roleMiddleware = require('../middleware/roleMiddleware');
+const authenticate = require('../middleware/auth');
 
 /**
- * Dashboard Overview (Admin/Officer only)
+ * Dashboard Overview (All authenticated users)
  */
-router.get('/', roleMiddleware(['Admin','Officer']), dashboardController.getDashboardStats);
+router.get('/', authenticate, dashboardController.getDashboardStats);
 
 module.exports = router;

@@ -1,0 +1,11 @@
+pattern_id,primary_asset_type,secondary_asset_type,cascade_probability,avg_cascade_time_hours,impact_severity,historical_occurrences,mitigation_cost
+1,Water Pipeline,Road,0.75,48,High,15,250000
+2,Sewage,Water Pipeline,0.65,72,Medium,12,180000
+3,Electricity,Street Light,0.85,24,Low,20,50000
+4,Road,Bridge,0.55,120,High,8,400000
+5,Bridge,Road,0.70,96,Medium,10,300000
+6,Water Pipeline,Sewage,0.60,60,Medium,11,200000
+7,Electricity,Water Pipeline,0.40,36,Low,5,120000
+8,Road,Water Pipeline,0.50,84,Medium,9,220000
+9,Sewage,Road,0.45,90,Low,7,150000
+10,Bridge,Water Pipeline,0.35,108,Low,4,180000

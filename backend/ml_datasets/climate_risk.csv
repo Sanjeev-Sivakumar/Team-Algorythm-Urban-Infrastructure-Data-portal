@@ -1,0 +1,11 @@
+location_id,latitude,longitude,district,flood_risk_score,heat_vulnerability_score,environmental_impact_score,resilience_score,elevation,drainage_quality,vegetation_cover
+1,9.9252,78.1198,Madurai Central,0.65,0.78,0.55,0.72,120,0.60,0.45
+2,9.9400,78.1200,Madurai North,0.45,0.82,0.48,0.68,135,0.75,0.52
+3,9.9100,78.1150,Madurai South,0.72,0.75,0.62,0.65,110,0.55,0.40
+4,9.9300,78.1400,Madurai East,0.58,0.80,0.52,0.70,125,0.68,0.48
+5,9.9200,78.1000,Madurai West,0.50,0.76,0.58,0.74,140,0.72,0.55
+6,9.9350,78.1250,Madurai Central,0.68,0.79,0.54,0.71,118,0.62,0.43
+7,9.9450,78.1180,Madurai North,0.42,0.83,0.46,0.69,138,0.78,0.54
+8,9.9050,78.1120,Madurai South,0.75,0.74,0.64,0.64,108,0.52,0.38
+9,9.9280,78.1420,Madurai East,0.60,0.81,0.50,0.71,122,0.70,0.50
+10,9.9180,78.0980,Madurai West,0.48,0.77,0.60,0.75,142,0.74,0.57

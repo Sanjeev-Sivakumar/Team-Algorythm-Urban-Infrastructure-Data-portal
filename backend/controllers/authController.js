@@ -11,6 +11,16 @@ exports.register = async (req, res) => {
     try {
         const { name, email, password, role } = req.body;
 
+        // Check if email already exists
+        const existingUser = await pool.query(
+            `SELECT id FROM users WHERE email = $1`,
+            [email]
+        );
+
+        if (existingUser.rows.length > 0) {
+            return res.status(400).json({ error: "Email already registered" });
+        }
+
         const hashedPassword = await bcrypt.hash(password, 10);
 
         const result = await pool.query(
@@ -27,7 +37,7 @@ exports.register = async (req, res) => {
 
     } catch (error) {
         console.error("Register Error:", error);
-        res.status(500).json({ error: "Email may already exist" });
+        res.status(500).json({ error: "Registration failed" });
     }
 };
 

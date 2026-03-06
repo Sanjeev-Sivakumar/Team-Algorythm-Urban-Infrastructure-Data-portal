@@ -458,3 +458,208 @@ tr:hover {
         grid-template-columns: 1fr;
     }
 }
+
+/* Advanced Features Styles */
+.advanced-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #e2e8f0;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.tab-btn:hover {
+    border-color: #667eea;
+    background: #f7fafc;
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: transparent;
+}
+
+.advanced-section {
+    padding: 1.5rem;
+    background: #f7fafc;
+    border-radius: 12px;
+}
+
+.advanced-section h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+}
+
+.advanced-section h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #4a5568;
+}
+
+.result-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.result-card h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #667eea;
+}
+
+.result-card p {
+    margin-bottom: 0.8rem;
+    font-size: 14px;
+}
+
+.result-card strong {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 13px;
+}
+
+.data-table th {
+    background: #667eea;
+    color: white;
+    padding: 0.8rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.data-table td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.data-table tr:hover {
+    background: #f7fafc;
+}
+
+.badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.badge-high {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.badge-medium {
+    background: #fed7aa;
+    color: #7c2d12;
+}
+
+.badge-low {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.badge-success {
+    background: #c6f6d5;
+    color: #22543d;
+}
+
+.badge-info {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.badge-positive {
+    background: #c6f6d5;
+    color: #22543d;
+}
+
+.badge-negative {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.sim-card, .opt-card, .iot-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.sim-card h4, .opt-card h4, .iot-card h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #667eea;
+}
+
+.sim-card input, .sim-card select,
+.opt-card input, .opt-card select,
+.iot-card input, .iot-card select {
+    padding: 0.6rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    margin-right: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.risk-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.risk-item {
+    display: grid;
+    grid-template-columns: 150px 1fr 80px;
+    align-items: center;
+    gap: 1rem;
+}
+
+.risk-item .progress-bar {
+    height: 20px;
+    background: #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.risk-item .progress {
+    height: 100%;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    transition: width 0.3s;
+}
+
+code {
+    background: #f7fafc;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 13px;
+    color: #667eea;
+    font-family: 'Courier New', monospace;
+}

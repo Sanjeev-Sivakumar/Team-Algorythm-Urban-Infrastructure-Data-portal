@@ -1,0 +1,16 @@
+budget_id,year,quarter,department,allocated_amount,spent_amount,asset_type,project_count,efficiency_score
+1,2023,1,Public Works,5000000,4750000,Road,12,0.95
+2,2023,1,Water Supply,3000000,2850000,Water Pipeline,8,0.95
+3,2023,2,Public Works,5200000,5100000,Bridge,5,0.98
+4,2023,2,Electricity,2000000,1900000,Street Light,15,0.95
+5,2023,3,Sanitation,2500000,2400000,Sewage,10,0.96
+6,2023,3,Public Works,4800000,4600000,Road,11,0.96
+7,2023,4,Water Supply,3200000,3100000,Water Pipeline,9,0.97
+8,2023,4,Electricity,2100000,2000000,Street Light,16,0.95
+9,2024,1,Public Works,5500000,5200000,Road,13,0.95
+10,2024,1,Sanitation,2700000,2600000,Sewage,11,0.96
+11,2024,2,Public Works,5400000,5300000,Bridge,6,0.98
+12,2024,2,Water Supply,3300000,3150000,Water Pipeline,10,0.95
+13,2024,3,Electricity,2200000,2100000,Street Light,17,0.95
+14,2024,3,Public Works,5000000,4800000,Road,12,0.96
+15,2024,4,Sanitation,2800000,2700000,Sewage,12,0.96

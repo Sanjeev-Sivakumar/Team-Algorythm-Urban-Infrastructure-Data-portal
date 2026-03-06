@@ -9,6 +9,7 @@ const slaRoutes = require('./routes/slaRoutes');
 const dashboardRoutes = require('./routes/dashboardRoutes');
 const exportRoutes = require('./routes/exportRoutes');
 const complaintRoutes = require('./routes/complaintRoutes');
+const advancedRoutes = require('./routes/advancedRoutes');
 const authMiddleware = require('./middleware/auth');
 
 const app = express();
@@ -23,6 +24,7 @@ app.use('/api/sla', authMiddleware, slaRoutes);
 app.use('/api/dashboard', authMiddleware, dashboardRoutes);
 app.use('/api/export', authMiddleware, exportRoutes);
 app.use('/api/complaints', authMiddleware, complaintRoutes);
+app.use('/api/advanced', authMiddleware, advancedRoutes);
 
 app.get('/', (req, res) => {
     res.send('🏙️ Urban Infrastructure Portal Backend is running');

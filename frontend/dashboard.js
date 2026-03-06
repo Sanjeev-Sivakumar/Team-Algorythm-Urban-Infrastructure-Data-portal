@@ -63,6 +63,12 @@ function checkAuth() {
         document.getElementById('exportMaintenancePdf').style.display = 'inline-block';
     }
     
+    // Hide advanced features for non-admin users
+    const advancedMenuItem = document.querySelector('.menu-item[onclick="showView(\'advanced\')"');
+    if (advancedMenuItem && currentUser.role !== 'Admin') {
+        advancedMenuItem.style.display = 'none';
+    }
+    
     loadDashboard();
 }
 
