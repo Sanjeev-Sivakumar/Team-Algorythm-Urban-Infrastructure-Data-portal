@@ -79,6 +79,140 @@ Citizen → Reports Issue → Officer → Adds Estimate → Admin → Approves/R
 
 ---
 
+## 🎯 InfraBrain AI - Complete Feature Set
+
+### ✅ Module 1-3: Foundation Layer (Implemented)
+- Asset Management System (CRUD)
+- PostgreSQL + PostGIS Database
+- GIS Mapping with Leaflet.js
+
+### ✅ Module 4: Infrastructure Health Scoring Engine
+**Endpoint**: `GET /api/intelligence/health/:assetId`
+
+Calculates 0-100 health score based on:
+- Maintenance frequency (25%)
+- Incident history (20%)
+- Budget adequacy (15%)
+- Asset age (25%)
+- Risk prediction (15%)
+
+**Status**: 🟢 Good (76-100) | 🟡 Moderate (51-75) | 🔴 Critical (0-50)
+
+### ✅ Module 5: AI-Based Risk Prediction Engine
+**Endpoint**: `GET /api/intelligence/risk-prediction/:assetId`
+
+Predicts failure probability for:
+- 3 months
+- 6 months
+- 12 months
+
+Using ML models trained on historical data.
+
+### ✅ Module 6: Infrastructure Criticality Index
+**Endpoint**: `GET /api/intelligence/criticality/:assetId`
+
+**Formula**: Criticality = Risk × Population Impact × Economic Value × Service Dependency
+
+**Leaderboard**: `GET /api/intelligence/criticality-leaderboard`
+
+### ✅ Module 7: Smart Priority Ranking Engine
+**Endpoint**: `GET /api/intelligence/priority-ranking`
+
+Auto-ranks assets based on:
+- Health score
+- Criticality score
+- Failure probability
+- Budget impact
+
+Generates urgent repair list.
+
+### ✅ Module 8: Policy & Budget Simulation Engine
+**Endpoint**: `POST /api/intelligence/budget-simulation`
+
+Simulate scenarios:
+- Budget increase/decrease
+- Maintenance frequency changes
+- Contractor allocation
+
+Shows before/after impact.
+
+### ✅ Module 9: Lifecycle & Maintenance Automation
+**Features**:
+- Auto-update asset status
+- Auto-alert overdue maintenance
+- Database triggers
+
+### ✅ Module 10: Cost Governance & Approval System
+**Implemented in**: Complaint Management
+- Multi-level approval workflow
+- Budget tracking
+- Financial audit trail
+
+### ✅ Module 11: Blockchain-Based Transparency
+**Endpoint**: `POST /api/advanced/blockchain-escrow`
+
+Features:
+- QR code generation
+- Smart contract escrow
+- Public verification portal
+
+### ✅ Module 12: AI Fraud & Anomaly Detection
+**Endpoint**: `GET /api/intelligence/fraud-detection`
+
+Detects:
+- Fake invoices
+- Duplicate entries
+- Budget spikes
+- Manipulated data
+
+### ✅ Module 13: Root Cause Analysis Engine
+**Endpoint**: `POST /api/intelligence/root-cause-analysis`
+
+Analyzes:
+- Why asset failed
+- Maintenance delays
+- Budget shortages
+- Contractor delays
+
+### ✅ Module 14: Climate & Environmental Risk Analysis
+**Endpoint**: `GET /api/intelligence/climate-risk/:assetId`
+
+Calculates:
+- 🌊 Flood risk
+- 🌡 Heat vulnerability
+- 🌍 Environmental impact
+- Climate resilience score
+
+### ✅ Module 15: Emergency Response Optimization
+**Endpoint**: `POST /api/intelligence/emergency-response`
+
+Suggests:
+- Nearest contractor
+- Emergency team
+- Fastest route
+- Resource allocation
+
+### ✅ Module 16: Infrastructure Equity Analysis
+**Endpoint**: `GET /api/intelligence/equity-analysis`
+
+Checks fairness:
+- Investment per district
+- Budget distribution
+- Risk imbalance
+
+### 🎯 Unified Intelligence Dashboard
+**Endpoint**: `GET /api/intelligence/comprehensive-dashboard`
+
+All metrics in one view:
+- Health scoring
+- Criticality index
+- Risk predictions
+- Priority ranking
+- Fraud alerts
+- Equity analysis
+
+---
+
 ## 🛠 API Endpoints for Testing
 
 ### Authentication APIs
@@ -361,22 +495,401 @@ Response:
 }
 ```
 
+### Intelligence APIs (InfraBrain AI)
+
+#### GET /api/intelligence/health/:assetId
+```json
+Response:
+{
+  "success": true,
+  "data": {
+    "assetId": 1,
+    "healthScore": 78,
+    "status": "Good",
+    "scores": {
+      "maintenance": { "value": 85, "weight": 0.25 },
+      "incidents": { "value": 75, "weight": 0.20 },
+      "budget": { "value": 80, "weight": 0.15 },
+      "age": { "value": 70, "weight": 0.25 },
+      "risk": { "value": 82, "weight": 0.15 }
+    },
+    "factors": [
+      {
+        "factor": "Well Maintained",
+        "impact": "positive",
+        "description": "Regular maintenance schedule maintained",
+        "recommendation": "Continue current maintenance program"
+      }
+    ]
+  }
+}
+```
+
+#### GET /api/intelligence/criticality/:assetId
+```json
+Response:
+{
+  "success": true,
+  "data": {
+    "assetId": 1,
+    "criticalityScore": 85.5,
+    "rank": "Critical",
+    "factors": {
+      "riskLevel": 0.75,
+      "populationImpact": 50000,
+      "economicValue": 5000000,
+      "serviceDependency": 0.90
+    }
+  }
+}
+```
+
+#### GET /api/intelligence/risk-prediction/:assetId
+```json
+Response:
+{
+  "success": true,
+  "data": {
+    "assetId": 1,
+    "predictions": {
+      "3_months": { "probability": 0.15, "confidence": 0.85 },
+      "6_months": { "probability": 0.35, "confidence": 0.80 },
+      "12_months": { "probability": 0.65, "confidence": 0.75 }
+    },
+    "trend": "increasing",
+    "recommendations": [
+      "Schedule preventive maintenance within 3 months",
+      "Monitor closely for signs of deterioration"
+    ]
+  }
+}
+```
+
+#### GET /api/intelligence/priority-ranking
+```json
+Response:
+{
+  "success": true,
+  "data": {
+    "ranking": [
+      {
+        "assetId": 5,
+        "name": "Main Bridge",
+        "priorityScore": 95,
+        "urgency": "Critical",
+        "estimatedCost": 500000,
+        "recommendation": "Immediate action required"
+      },
+      {
+        "assetId": 12,
+        "name": "Water Pipeline",
+        "priorityScore": 82,
+        "urgency": "High",
+        "estimatedCost": 150000,
+        "recommendation": "Schedule within 30 days"
+      }
+    ],
+    "summary": {
+      "urgent": 5,
+      "planned": 12,
+      "preventative": 8
+    }
+  }
+}
+```
+
+#### POST /api/intelligence/budget-simulation
+```json
+Request:
+{
+  "scenario": {
+    "budgetChange": 20,
+    "maintenanceFrequency": "increased",
+    "timeframe": 12
+  }
+}
+
+Response:
+{
+  "success": true,
+  "data": {
+    "before": {
+      "totalBudget": 10000000,
+      "riskReduction": 0,
+      "assetsAtRisk": 25
+    },
+    "after": {
+      "totalBudget": 12000000,
+      "riskReduction": 35,
+      "assetsAtRisk": 16
+    },
+    "impact": {
+      "costBenefit": 1.8,
+      "recommendation": "Highly recommended"
+    }
+  }
+}
+```
+
+#### GET /api/intelligence/fraud-detection
+```json
+Response:
+{
+  "success": true,
+  "data": {
+    "alerts": [
+      {
+        "type": "Duplicate Invoice",
+        "severity": "High",
+        "description": "Invoice #1234 appears twice",
+        "amount": 50000,
+        "recommendation": "Investigate immediately"
+      },
+      {
+        "type": "Budget Spike",
+        "severity": "Medium",
+        "description": "Unusual 300% increase in department spending",
+        "amount": 200000,
+        "recommendation": "Review approval chain"
+      }
+    ],
+    "summary": {
+      "totalAlerts": 8,
+      "critical": 2,
+      "high": 3,
+      "medium": 3,
+      "estimatedFraudRisk": 250000
+    }
+  }
+}
+```
+
+#### POST /api/intelligence/root-cause-analysis
+```json
+Request:
+{
+  "assetId": 1,
+  "failureDate": "2024-01-15"
+}
+
+Response:
+{
+  "success": true,
+  "data": {
+    "assetId": 1,
+    "failureType": "Structural Failure",
+    "rootCauses": [
+      {
+        "cause": "Delayed Maintenance",
+        "contribution": 45,
+        "evidence": "Last maintenance was 18 months ago"
+      },
+      {
+        "cause": "Budget Shortage",
+        "contribution": 30,
+        "evidence": "Approved budget was 40% less than estimated"
+      },
+      {
+        "cause": "Contractor Delay",
+        "contribution": 25,
+        "evidence": "Previous repair delayed by 3 months"
+      }
+    ],
+    "recommendations": [
+      "Increase maintenance frequency to quarterly",
+      "Allocate adequate budget for critical assets",
+      "Review contractor performance"
+    ]
+  }
+}
+```
+
+#### GET /api/intelligence/climate-risk/:assetId
+```json
+Response:
+{
+  "success": true,
+  "data": {
+    "assetId": 1,
+    "climateRisks": {
+      "floodRisk": 0.65,
+      "heatVulnerability": 0.78,
+      "environmentalImpact": 0.55,
+      "resilienceScore": 0.72
+    },
+    "assessment": "Moderate Risk",
+    "recommendations": [
+      "Install flood barriers",
+      "Improve drainage system",
+      "Use heat-resistant materials"
+    ]
+  }
+}
+```
+
+#### POST /api/intelligence/emergency-response
+```json
+Request:
+{
+  "assetId": 1,
+  "failureType": "Water Pipeline Burst"
+}
+
+Response:
+{
+  "success": true,
+  "data": {
+    "emergencyId": "EMG-2024-001",
+    "nearestContractor": {
+      "name": "ABC Construction",
+      "distance": 2.5,
+      "eta": 15,
+      "rating": 4.5
+    },
+    "emergencyTeam": {
+      "team": "Water Emergency Unit",
+      "contact": "+91-9876543210"
+    },
+    "route": {
+      "distance": 2.5,
+      "duration": 15,
+      "traffic": "Light"
+    },
+    "resources": [
+      "Emergency repair kit",
+      "Water pumps",
+      "Temporary pipes"
+    ],
+    "estimatedCost": 75000,
+    "estimatedDuration": "4 hours"
+  }
+}
+```
+
+#### GET /api/intelligence/equity-analysis
+```json
+Response:
+{
+  "success": true,
+  "data": {
+    "districtAnalysis": [
+      {
+        "district": "Madurai Central",
+        "investment": 5000000,
+        "population": 100000,
+        "perCapita": 50,
+        "equityScore": 75
+      },
+      {
+        "district": "Madurai North",
+        "investment": 3000000,
+        "population": 80000,
+        "perCapita": 37.5,
+        "equityScore": 55
+      }
+    ],
+    "imbalance": {
+      "highestInvestment": "Madurai Central",
+      "lowestInvestment": "Madurai South",
+      "gap": 2500000
+    },
+    "recommendations": [
+      "Increase budget allocation for Madurai South",
+      "Balance infrastructure development across districts"
+    ]
+  }
+}
+```
+
+#### GET /api/intelligence/comprehensive-dashboard
+```json
+Response:
+{
+  "success": true,
+  "data": {
+    "timestamp": "2024-01-15T10:30:00Z",
+    "modules": {
+      "healthScoring": {
+        "name": "Infrastructure Health Scoring",
+        "score": 75,
+        "distribution": { "good": 120, "moderate": 25, "critical": 5 }
+      },
+      "criticalityIndex": {
+        "name": "Infrastructure Criticality Index",
+        "critical": 8,
+        "high": 15,
+        "medium": 50,
+        "low": 77,
+        "averageCriticality": 65
+      },
+      "riskPrediction": {
+        "name": "Risk Prediction Engine",
+        "averageRisk": 0.35,
+        "distribution": { "high": 12, "medium": 38, "low": 100 }
+      },
+      "priorityRanking": {
+        "name": "Smart Priority Ranking",
+        "urgent": 5,
+        "planned": 12,
+        "preventative": 8
+      },
+      "fraudDetection": {
+        "name": "Fraud & Anomaly Detection",
+        "totalAlerts": 8,
+        "criticalAlerts": 2,
+        "fraudRisk": 250000
+      },
+      "equityAnalysis": {
+        "name": "Infrastructure Equity Analysis",
+        "overallEquity": "Moderate",
+        "equityScore": 68
+      }
+    },
+    "actionItems": [
+      {
+        "priority": "Critical",
+        "action": "5 assets in critical condition",
+        "module": "Health Scoring",
+        "recommendation": "Immediate maintenance required"
+      },
+      {
+        "priority": "High",
+        "action": "2 critical fraud alerts detected",
+        "module": "Fraud Detection",
+        "recommendation": "Immediate investigation required"
+      }
+    ]
+  }
+}
+```
+
 ---
 
 ## 🗄 Database Schema Overview
 
-### Core Tables
+### Core Tables (18 Total)
 - **users**: Authentication and role management
-- **assets**: Infrastructure assets with PostGIS geometry
+- **assets**: Infrastructure assets with PostGIS geometry + district column
 - **complaints**: Three-tier complaint workflow
 - **maintenance_schedule**: Maintenance planning and tracking
 - **sla_tracking**: SLA monitoring with breach detection
+- **budget_history**: Budget allocation and spending by district/department
+
+### ML Dataset Tables (5 Tables with 75+ Training Records)
+- **asset_failure_training** (40 records): Historical failure patterns by asset type, age, weather
+- **contractor_performance** (10 records): Quality ratings, reliability scores, on-time delivery
+- **cascading_failures** (10 records): Cascade probability between asset types
+- **climate_risk_data** (10 records): Flood risk, heat vulnerability by district
+- **budget_optimization_data** (15 records): Department efficiency scores
 
 ### Advanced Tables
 - **ml_predictions**: Machine learning predictions
 - **smart_contracts**: Blockchain escrow data
 - **climate_assessments**: Climate risk evaluations
 - **simulations**: Scenario simulation results
+- **iot_devices**: IoT sensor data
+- **optimization_results**: Optimization outputs
+- **public_verifications**: Blockchain verification records
 
 ---
 
@@ -425,15 +938,48 @@ Response:
 3. Register as Citizen → Report Complaint
 4. Login as Officer → Add Estimate
 5. Login as Admin → Approve Complaint
+6. Test InfraBrain AI modules from Advanced Features tab
 ```
 
-### 2. API Testing with Postman
+### 2. InfraBrain AI Module Testing
 ```bash
-1. Import API collection from docs/
-2. Test authentication endpoints
-3. Test CRUD operations on assets
-4. Test complaint workflow
-5. Test advanced features
+# All modules work with actual ML dataset tables
+
+# Health Scoring (uses maintenance_schedule, complaints, ml_predictions)
+GET /api/intelligence/health/1
+
+# Risk Prediction (uses asset_failure_training, climate_assessments)
+GET /api/intelligence/risk-prediction/1
+
+# Criticality Index (uses cascading_failures, assets)
+GET /api/intelligence/criticality/1
+
+# Priority Ranking (combines health, criticality, risk)
+GET /api/intelligence/priority-ranking
+
+# Budget Simulation (uses budget_history, assets)
+POST /api/intelligence/budget-simulation
+Body: {"type": "INCREASE_BUDGET", "percentage": 20}
+
+# Fraud Detection (uses maintenance_schedule, complaints)
+GET /api/intelligence/fraud-detection
+
+# Root Cause Analysis (uses maintenance_schedule, complaints, climate_assessments)
+POST /api/intelligence/root-cause-analysis
+Body: {"assetId": 1, "failureDate": "2024-01-15"}
+
+# Climate Risk (uses climate_assessments, climate_risk_data)
+GET /api/intelligence/climate-risk/1
+
+# Emergency Response (uses contractor_performance, assets)
+POST /api/intelligence/emergency-response
+Body: {"assetId": 1, "failureType": "Water Pipeline Burst"}
+
+# Equity Analysis (uses assets, budget_history)
+GET /api/intelligence/equity-analysis
+
+# Comprehensive Dashboard (all modules)
+GET /api/intelligence/comprehensive-dashboard
 ```
 
 ### 3. Database Verification
@@ -441,12 +987,21 @@ Response:
 -- Check asset creation
 SELECT * FROM assets ORDER BY created_at DESC LIMIT 5;
 
+-- Check ML training data
+SELECT asset_type, COUNT(*) FROM asset_failure_training GROUP BY asset_type;
+
+-- Check contractor performance data
+SELECT contractor_name, reliability_score FROM contractor_performance ORDER BY reliability_score DESC;
+
 -- Check complaint workflow
 SELECT c.*, u.name as user_name FROM complaints c 
 JOIN users u ON c.user_id = u.id;
 
 -- Check SLA tracking
 SELECT * FROM sla_tracking WHERE status = 'Breached';
+
+-- Check budget by district
+SELECT district, SUM(allocated_amount) as total FROM budget_history GROUP BY district;
 ```
 
 ---
@@ -455,11 +1010,41 @@ SELECT * FROM sla_tracking WHERE status = 'Breached';
 
 1. **PostGIS Integration**: Advanced geospatial queries and mapping
 2. **Three-Tier Workflow**: Structured complaint management process
-3. **ML Predictions**: Asset failure forecasting and optimization
+3. **ML Predictions with Real Data**: 75+ training records across 5 ML dataset tables
 4. **Blockchain Escrow**: Smart contract integration for transparency
 5. **Climate Risk Assessment**: Environmental impact evaluation
 6. **Real-time SLA Monitoring**: Automated breach detection
 7. **Role-Based Security**: Comprehensive access control system
+8. **16 InfraBrain AI Modules**: All working with actual database tables
+
+---
+
+## ✅ All Systems Operational
+
+### Database Status
+- ✅ 18 tables created with proper indexes and foreign keys
+- ✅ 10 sample assets across 5 districts (Central, North, South, East, West)
+- ✅ 20 budget history records (2023-2024)
+- ✅ 5 maintenance records with various statuses
+- ✅ 3 complaint records with approval workflow
+- ✅ 75+ ML training records for realistic predictions
+
+### Backend Services Status
+- ✅ All 16 InfraBrain AI modules fixed and operational
+- ✅ Correct table references (asset_failure_training, contractor_performance, cascading_failures)
+- ✅ Error handling for empty datasets
+- ✅ JWT token expiry: 7 days
+
+### Frontend Status
+- ✅ Advanced Features dashboard with 11 intelligence module cards
+- ✅ Proper error handling and loading states
+- ✅ No emojis in UI text
+
+### No More Errors
+- ❌ "relation does not exist" - FIXED
+- ❌ "mean requires at least one data point" - FIXED
+- ❌ "function does not exist" - FIXED
+- ❌ "column does not exist" - FIXED
 
 ---
 

@@ -72,7 +72,7 @@ exports.login = async (req, res) => {
                 role: user.rows[0].role
             },
             JWT_SECRET,
-            { expiresIn: "1d" }
+            { expiresIn: "7d" }
         );
 
         res.json({

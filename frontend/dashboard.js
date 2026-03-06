@@ -140,7 +140,7 @@ function detectLocation() {
 
 async function loadDashboard() {
     try {
-        const res = await authFetch(`${API_BASE}/dashboard`);
+        const res = await authFetch(`${API_BASE}/dashboard/stats`);
         const stats = await res.json();
         
         renderStats(stats);

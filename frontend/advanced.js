@@ -2,7 +2,74 @@
 
 const API_URL = 'http://localhost:5000/api';
 
-let currentAdvancedTab = 'ml';
+let currentAdvancedTab = 'intelligence';
+
+function renderIntelligenceTab() {
+    return `
+        <div class="advanced-section">
+            <h3>InfraBrain AI - All 16 Modules</h3>
+            
+            <div class="intelligence-grid">
+                <div class="intel-card" style="cursor: pointer;" onclick="loadHealthScoring()">
+                    <h4>Module 4: Health Scoring</h4>
+                    <p>Calculate 0-100 health scores for assets</p>
+                </div>
+                
+                <div class="intel-card" style="cursor: pointer;" onclick="loadRiskPrediction()">
+                    <h4>Module 5: Risk Prediction</h4>
+                    <p>3/6/12 month failure predictions</p>
+                </div>
+                
+                <div class="intel-card" style="cursor: pointer;" onclick="loadCriticalityIndex()">
+                    <h4>Module 6: Criticality Index</h4>
+                    <p>Risk x Population x Economic x Service</p>
+                </div>
+                
+                <div class="intel-card" style="cursor: pointer;" onclick="loadPriorityRanking()">
+                    <h4>Module 7: Priority Ranking</h4>
+                    <p>Auto-ranked urgent repair list</p>
+                </div>
+                
+                <div class="intel-card" style="cursor: pointer;" onclick="loadBudgetSimulation()">
+                    <h4>Module 8: Budget Simulation</h4>
+                    <p>What-if scenario analysis</p>
+                </div>
+                
+                <div class="intel-card" style="cursor: pointer;" onclick="loadFraudDetection()">
+                    <h4>Module 12: Fraud Detection</h4>
+                    <p>AI-powered anomaly detection</p>
+                </div>
+                
+                <div class="intel-card" style="cursor: pointer;" onclick="loadRootCause()">
+                    <h4>Module 13: Root Cause Analysis</h4>
+                    <p>Automated failure investigation</p>
+                </div>
+                
+                <div class="intel-card" style="cursor: pointer;" onclick="loadClimateRisk()">
+                    <h4>Module 14: Climate Risk</h4>
+                    <p>Flood/heat/environmental assessment</p>
+                </div>
+                
+                <div class="intel-card" style="cursor: pointer;" onclick="loadEmergencyResponse()">
+                    <h4>Module 15: Emergency Response</h4>
+                    <p>Optimized contractor dispatch</p>
+                </div>
+                
+                <div class="intel-card" style="cursor: pointer;" onclick="loadEquityAnalysis()">
+                    <h4>Module 16: Equity Analysis</h4>
+                    <p>District-level fairness metrics</p>
+                </div>
+                
+                <div class="intel-card" style="cursor: pointer;" onclick="loadComprehensiveDashboard()">
+                    <h4>Unified Dashboard</h4>
+                    <p>All metrics in one view</p>
+                </div>
+            </div>
+            
+            <div id="intelligenceResult" style="margin-top: 2rem;"></div>
+        </div>
+    `;
+}
 
 function showAdvancedTab(tab) {
     currentAdvancedTab = tab;
@@ -12,6 +79,10 @@ function showAdvancedTab(tab) {
     const content = document.getElementById('advancedContent');
     
     switch(tab) {
+        case 'intelligence':
+            content.innerHTML = renderIntelligenceTab();
+            setTimeout(() => loadAdvancedAssetDropdowns(), 200);
+            break;
         case 'ml':
             content.innerHTML = renderMLTab();
             setTimeout(() => loadAdvancedAssetDropdowns(), 200);
@@ -625,3 +696,440 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, 1000);
 });
+
+
+// ========================================
+// INFRABRAIN AI INTELLIGENCE MODULES
+// ========================================
+
+async function loadHealthScoring() {
+    const result = document.getElementById('intelligenceResult');
+    result.innerHTML = '<div class="loading">Loading health scores...</div>';
+    
+    try {
+        const response = await fetch(`${API_URL}/intelligence/health-dashboard`, {
+            headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
+        });
+        const data = await response.json();
+        console.log('Health scoring response:', data);
+        
+        if (data.success) {
+            let html = '<div class="result-card"><h3>Infrastructure Health Scoring</h3>';
+            html += `<p><strong>Average Score:</strong> ${data.data.averageScore}/100</p>`;
+            html += '<table class="data-table"><tr><th>Status</th><th>Count</th></tr>';
+            html += `<tr><td>Good (76-100)</td><td>${data.data.good}</td></tr>`;
+            html += `<tr><td>Moderate (51-75)</td><td>${data.data.moderate}</td></tr>`;
+            html += `<tr><td>Critical (0-50)</td><td>${data.data.critical}</td></tr>`;
+            html += '</table></div>';
+            result.innerHTML = html;
+        } else {
+            result.innerHTML = '<div class="error">No data available</div>';
+        }
+    } catch (error) {
+        console.error('Health scoring error:', error);
+        result.innerHTML = '<div class="error">Error: ' + error.message + '</div>';
+    }
+}
+
+async function loadRiskPrediction() {
+    const result = document.getElementById('intelligenceResult');
+    result.innerHTML = '<div class=\"loading\">Loading risk predictions...</div>';
+    
+    try {
+        const response = await fetch(`${API_URL}/intelligence/risk-metrics`, {
+            headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
+        });
+        const data = await response.json();
+        
+        if (data.success) {
+            let html = '<div class=\"result-card\"><h3>Risk Prediction Engine</h3>';
+            html += `<p><strong>Average Risk:</strong> ${(data.data.averageRisk * 100).toFixed(1)}%</p>`;
+            html += '<table class=\"data-table\"><tr><th>Risk Level</th><th>Assets</th></tr>';
+            html += `<tr><td>High Risk</td><td>${data.data.distribution.high}</td></tr>`;
+            html += `<tr><td>Medium Risk</td><td>${data.data.distribution.medium}</td></tr>`;
+            html += `<tr><td>Low Risk</td><td>${data.data.distribution.low}</td></tr>`;
+            html += '</table></div>';
+            result.innerHTML = html;
+        }
+    } catch (error) {
+        result.innerHTML = '<div class=\"error\">Error loading risk predictions</div>';
+    }
+}
+
+async function loadCriticalityIndex() {
+    const result = document.getElementById('intelligenceResult');
+    result.innerHTML = '<div class=\"loading\">Loading criticality index...</div>';
+    
+    try {
+        const response = await fetch(`${API_URL}/intelligence/criticality-leaderboard`, {
+            headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
+        });
+        const data = await response.json();
+        
+        if (data.success) {
+            let html = '<div class=\"result-card\"><h3>Infrastructure Criticality Index</h3>';
+            html += '<table class=\"data-table\"><tr><th>Rank</th><th>Asset</th><th>Score</th><th>Status</th></tr>';
+            data.data.leaderboard.slice(0, 10).forEach((item, index) => {
+                html += `<tr><td>${index + 1}</td><td>${item.name}</td><td>${item.criticalityScore.toFixed(1)}</td><td><span class=\"badge badge-${item.rank.toLowerCase()}\">${item.rank}</span></td></tr>`;
+            });
+            html += '</table></div>';
+            result.innerHTML = html;
+        }
+    } catch (error) {
+        result.innerHTML = '<div class=\"error\">Error loading criticality index</div>';
+    }
+}
+
+async function loadPriorityRanking() {
+    const result = document.getElementById('intelligenceResult');
+    result.innerHTML = '<div class=\"loading\">Loading priority ranking...</div>';
+    
+    try {
+        const response = await fetch(`${API_URL}/intelligence/priority-ranking`, {
+            headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
+        });
+        const data = await response.json();
+        
+        if (data.success) {
+            let html = '<div class=\"result-card\"><h3>Smart Priority Ranking</h3>';
+            html += `<p><strong>Urgent:</strong> ${data.data.summary.urgent} | <strong>Planned:</strong> ${data.data.summary.planned} | <strong>Preventative:</strong> ${data.data.summary.preventative}</p>`;
+            html += '<table class=\"data-table\"><tr><th>Priority</th><th>Asset</th><th>Score</th><th>Urgency</th></tr>';
+            data.data.ranking.slice(0, 10).forEach(item => {
+                html += `<tr><td>${item.priorityScore}</td><td>${item.name}</td><td>${item.priorityScore}</td><td><span class=\"badge badge-${item.urgency.toLowerCase()}\">${item.urgency}</span></td></tr>`;
+            });
+            html += '</table></div>';
+            result.innerHTML = html;
+        }
+    } catch (error) {
+        result.innerHTML = '<div class=\"error\">Error loading priority ranking</div>';
+    }
+}
+
+async function loadBudgetSimulation() {
+    const result = document.getElementById('intelligenceResult');
+    result.innerHTML = `
+        <div class=\"result-card\">
+            <h3>Budget Simulation Engine</h3>
+            <div class=\"form-group\">
+                <label>Budget Change (%)</label>
+                <input type=\"number\" id=\"budgetChangePercent\" value=\"20\" style=\"padding: 0.5rem;\">
+            </div>
+            <div class=\"form-group\">
+                <label>Maintenance Frequency</label>
+                <select id=\"maintenanceFreq\" style=\"padding: 0.5rem;\">
+                    <option value=\"increased\">Increased</option>
+                    <option value=\"decreased\">Decreased</option>
+                    <option value=\"same\">Same</option>
+                </select>
+            </div>
+            <button class=\"btn btn-primary\" onclick=\"runBudgetSimulation()\">Run Simulation</button>
+            <div id=\"budgetSimResult\"></div>
+        </div>
+    `;
+}
+
+async function runBudgetSimulation() {
+    const budgetChange = document.getElementById('budgetChangePercent').value;
+    const maintenanceFreq = document.getElementById('maintenanceFreq').value;
+    
+    try {
+        const response = await fetch(`${API_URL}/intelligence/budget-simulation`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('token')}`
+            },
+            body: JSON.stringify({
+                scenario: {
+                    budgetChange: parseFloat(budgetChange),
+                    maintenanceFrequency: maintenanceFreq,
+                    timeframe: 12
+                }
+            })
+        });
+        const data = await response.json();
+        
+        if (data.success) {
+            let html = '<div style=\"margin-top: 1rem;\"><h4>Simulation Results</h4>';
+            html += '<table class=\"data-table\"><tr><th>Metric</th><th>Before</th><th>After</th></tr>';
+            html += `<tr><td>Total Budget</td><td>Rs ${data.data.before.totalBudget.toLocaleString()}</td><td>Rs ${data.data.after.totalBudget.toLocaleString()}</td></tr>`;
+            html += `<tr><td>Risk Reduction</td><td>${data.data.before.riskReduction}%</td><td>${data.data.after.riskReduction}%</td></tr>`;
+            html += `<tr><td>Assets at Risk</td><td>${data.data.before.assetsAtRisk}</td><td>${data.data.after.assetsAtRisk}</td></tr>`;
+            html += '</table>';
+            html += `<p><strong>Cost-Benefit Ratio:</strong> ${data.data.impact.costBenefit}</p>`;
+            html += `<p><strong>Recommendation:</strong> ${data.data.impact.recommendation}</p></div>`;
+            document.getElementById('budgetSimResult').innerHTML = html;
+        }
+    } catch (error) {
+        document.getElementById('budgetSimResult').innerHTML = '<div class=\"error\">Error running simulation</div>';
+    }
+}
+
+async function loadFraudDetection() {
+    const result = document.getElementById('intelligenceResult');
+    result.innerHTML = '<div class=\"loading\">Detecting fraud patterns...</div>';
+    
+    try {
+        const response = await fetch(`${API_URL}/intelligence/fraud-detection`, {
+            headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
+        });
+        const data = await response.json();
+        
+        if (data.success) {
+            let html = '<div class=\"result-card\"><h3>AI Fraud & Anomaly Detection</h3>';
+            html += `<p><strong>Total Alerts:</strong> ${data.data.summary.totalAlerts} | <strong>Critical:</strong> ${data.data.summary.critical} | <strong>Estimated Risk:</strong> Rs ${data.data.summary.estimatedFraudRisk.toLocaleString()}</p>`;
+            html += '<table class=\"data-table\"><tr><th>Type</th><th>Severity</th><th>Description</th><th>Amount</th></tr>';
+            data.data.alerts.forEach(alert => {
+                html += `<tr><td>${alert.type}</td><td><span class=\"badge badge-${alert.severity.toLowerCase()}\">${alert.severity}</span></td><td>${alert.description}</td><td>Rs ${alert.amount.toLocaleString()}</td></tr>`;
+            });
+            html += '</table></div>';
+            result.innerHTML = html;
+        }
+    } catch (error) {
+        result.innerHTML = '<div class=\"error\">Error detecting fraud</div>';
+    }
+}
+
+async function loadRootCause() {
+    const result = document.getElementById('intelligenceResult');
+    result.innerHTML = `
+        <div class=\"result-card\">
+            <h3>Root Cause Analysis Engine</h3>
+            <div class=\"form-group\">
+                <label>Select Asset</label>
+                <select id=\"rootCauseAsset\" style=\"padding: 0.5rem;\">
+                    <option value=\"\">Select Asset</option>
+                </select>
+            </div>
+            <div class=\"form-group\">
+                <label>Failure Date</label>
+                <input type=\"date\" id=\"failureDate\" style=\"padding: 0.5rem;\">
+            </div>
+            <button class=\"btn btn-primary\" onclick=\"analyzeRootCause()\">Analyze</button>
+            <div id=\"rootCauseResult\"></div>
+        </div>
+    `;
+    loadAdvancedAssetDropdowns();
+}
+
+async function analyzeRootCause() {
+    const assetId = document.getElementById('rootCauseAsset').value;
+    const failureDate = document.getElementById('failureDate').value;
+    
+    if (!assetId || !failureDate) return alert('Select asset and date');
+    
+    try {
+        const response = await fetch(`${API_URL}/intelligence/root-cause-analysis`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('token')}`
+            },
+            body: JSON.stringify({ assetId: parseInt(assetId), failureDate })
+        });
+        const data = await response.json();
+        
+        if (data.success) {
+            let html = '<div style=\"margin-top: 1rem;\"><h4>Root Cause Analysis</h4>';
+            html += `<p><strong>Failure Type:</strong> ${data.data.failureType}</p>`;
+            html += '<table class=\"data-table\"><tr><th>Cause</th><th>Contribution</th><th>Evidence</th></tr>';
+            data.data.rootCauses.forEach(cause => {
+                html += `<tr><td>${cause.cause}</td><td>${cause.contribution}%</td><td>${cause.evidence}</td></tr>`;
+            });
+            html += '</table>';
+            html += '<h4>Recommendations:</h4><ul>';
+            data.data.recommendations.forEach(rec => {
+                html += `<li>${rec}</li>`;
+            });
+            html += '</ul></div>';
+            document.getElementById('rootCauseResult').innerHTML = html;
+        }
+    } catch (error) {
+        document.getElementById('rootCauseResult').innerHTML = '<div class=\"error\">Error analyzing root cause</div>';
+    }
+}
+
+async function loadClimateRisk() {
+    const result = document.getElementById('intelligenceResult');
+    result.innerHTML = '<div class=\"loading\">Loading climate risk analysis...</div>';
+    
+    try {
+        const response = await fetch(`${API_URL}/intelligence/climate-analysis-district`, {
+            headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
+        });
+        const data = await response.json();
+        
+        if (data.success) {
+            let html = '<div class=\"result-card\"><h3>Climate & Environmental Risk Analysis</h3>';
+            html += '<table class=\"data-table\"><tr><th>District</th><th>Flood Risk</th><th>Heat Vulnerability</th><th>Resilience</th></tr>';
+            data.data.districts.forEach(district => {
+                html += `<tr><td>${district.district}</td><td>${(district.floodRisk * 100).toFixed(1)}%</td><td>${(district.heatVulnerability * 100).toFixed(1)}%</td><td>${(district.resilienceScore * 100).toFixed(1)}%</td></tr>`;
+            });
+            html += '</table></div>';
+            result.innerHTML = html;
+        }
+    } catch (error) {
+        result.innerHTML = '<div class=\"error\">Error loading climate risk</div>';
+    }
+}
+
+async function loadEmergencyResponse() {
+    const result = document.getElementById('intelligenceResult');
+    result.innerHTML = `
+        <div class=\"result-card\">
+            <h3>Emergency Response Optimization</h3>
+            <div class=\"form-group\">
+                <label>Select Asset</label>
+                <select id=\"emergencyAsset\" style=\"padding: 0.5rem;\">
+                    <option value=\"\">Select Asset</option>
+                </select>
+            </div>
+            <div class=\"form-group\">
+                <label>Failure Type</label>
+                <input type=\"text\" id=\"emergencyType\" placeholder=\"e.g., Water Pipeline Burst\" style=\"padding: 0.5rem;\">
+            </div>
+            <button class=\"btn btn-primary\" onclick=\"optimizeEmergencyResponse()\">Optimize Response</button>
+            <div id=\"emergencyResult\"></div>
+        </div>
+    `;
+    loadAdvancedAssetDropdowns();
+}
+
+async function optimizeEmergencyResponse() {
+    const assetId = document.getElementById('emergencyAsset').value;
+    const failureType = document.getElementById('emergencyType').value;
+    
+    if (!assetId || !failureType) return alert('Fill all fields');
+    
+    try {
+        const response = await fetch(`${API_URL}/intelligence/emergency-response`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('token')}`
+            },
+            body: JSON.stringify({ assetId: parseInt(assetId), failureType })
+        });
+        const data = await response.json();
+        
+        if (data.success) {
+            let html = '<div style=\"margin-top: 1rem;\"><h4>Emergency Response Plan</h4>';
+            html += `<p><strong>Emergency ID:</strong> ${data.data.emergencyId}</p>`;
+            html += `<p><strong>Nearest Contractor:</strong> ${data.data.nearestContractor.name} (${data.data.nearestContractor.distance} km, ETA: ${data.data.nearestContractor.eta} min)</p>`;
+            html += `<p><strong>Emergency Team:</strong> ${data.data.emergencyTeam.team} (${data.data.emergencyTeam.contact})</p>`;
+            html += `<p><strong>Estimated Cost:</strong> Rs ${data.data.estimatedCost.toLocaleString()}</p>`;
+            html += `<p><strong>Estimated Duration:</strong> ${data.data.estimatedDuration}</p>`;
+            html += '<h4>Required Resources:</h4><ul>';
+            data.data.resources.forEach(resource => {
+                html += `<li>${resource}</li>`;
+            });
+            html += '</ul></div>';
+            document.getElementById('emergencyResult').innerHTML = html;
+        }
+    } catch (error) {
+        document.getElementById('emergencyResult').innerHTML = '<div class=\"error\">Error optimizing emergency response</div>';
+    }
+}
+
+async function loadEquityAnalysis() {
+    const result = document.getElementById('intelligenceResult');
+    result.innerHTML = '<div class=\"loading\">Analyzing infrastructure equity...</div>';
+    
+    try {
+        const response = await fetch(`${API_URL}/intelligence/equity-analysis`, {
+            headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
+        });
+        const data = await response.json();
+        
+        if (data.success) {
+            let html = '<div class=\"result-card\"><h3>Infrastructure Equity Analysis</h3>';
+            html += '<table class=\"data-table\"><tr><th>District</th><th>Investment</th><th>Population</th><th>Per Capita</th><th>Equity Score</th></tr>';
+            data.data.districtAnalysis.forEach(district => {
+                html += `<tr><td>${district.district}</td><td>Rs ${district.investment.toLocaleString()}</td><td>${district.population.toLocaleString()}</td><td>Rs ${district.perCapita}</td><td>${district.equityScore}</td></tr>`;
+            });
+            html += '</table>';
+            html += `<p><strong>Highest Investment:</strong> ${data.data.imbalance.highestInvestment}</p>`;
+            html += `<p><strong>Lowest Investment:</strong> ${data.data.imbalance.lowestInvestment}</p>`;
+            html += `<p><strong>Gap:</strong> Rs ${data.data.imbalance.gap.toLocaleString()}</p>`;
+            html += '<h4>Recommendations:</h4><ul>';
+            data.data.recommendations.forEach(rec => {
+                html += `<li>${rec}</li>`;
+            });
+            html += '</ul></div>';
+            result.innerHTML = html;
+        }
+    } catch (error) {
+        result.innerHTML = '<div class=\"error\">Error analyzing equity</div>';
+    }
+}
+
+async function loadComprehensiveDashboard() {
+    const result = document.getElementById('intelligenceResult');
+    result.innerHTML = '<div class=\"loading\">Loading comprehensive dashboard...</div>';
+    
+    try {
+        const response = await fetch(`${API_URL}/intelligence/comprehensive-dashboard`, {
+            headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
+        });
+        const data = await response.json();
+        
+        if (data.success) {
+            let html = '<div class="result-card"><h3>Unified Intelligence Dashboard</h3>';
+            html += '<div class="modules-grid">';
+            
+            Object.keys(data.data.modules).forEach(key => {
+                const module = data.data.modules[key];
+                html += `<div class="module-card"><h4>${module.name}</h4>`;
+                html += `<p>${JSON.stringify(module).substring(0, 100)}...</p></div>`;
+            });
+            
+            html += '</div>';
+            html += '<h4>Action Items:</h4><ul>';
+            data.data.actionItems.forEach(item => {
+                html += `<li><strong>${item.priority}:</strong> ${item.action} (${item.module}) - ${item.recommendation}</li>`;
+            });
+            html += '</ul></div>';
+            result.innerHTML = html;
+        } else {
+            result.innerHTML = '<div class="error">No data available</div>';
+        }
+    } catch (error) {
+        console.error('Comprehensive dashboard error:', error);
+        result.innerHTML = '<div class="error">Error: ' + error.message + '</div>';
+    }
+}
+
+// Update asset dropdown loader to include root cause and emergency selects
+const originalLoadDropdowns = loadAdvancedAssetDropdowns;
+loadAdvancedAssetDropdowns = async function() {
+    await originalLoadDropdowns();
+    
+    // Also populate root cause and emergency dropdowns if they exist
+    const rootCauseSelect = document.getElementById('rootCauseAsset');
+    const emergencySelect = document.getElementById('emergencyAsset');
+    
+    if (rootCauseSelect || emergencySelect) {
+        try {
+            const response = await fetch(`${API_URL}/assets`, {
+                headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
+            });
+            const assets = await response.json();
+            
+            if (rootCauseSelect) {
+                rootCauseSelect.innerHTML = '<option value=\"\">Select Asset</option>';
+                assets.forEach(asset => {
+                    rootCauseSelect.innerHTML += `<option value=\"${asset.id}\">${asset.name} (${asset.type})</option>`;
+                });
+            }
+            
+            if (emergencySelect) {
+                emergencySelect.innerHTML = '<option value=\"\">Select Asset</option>';
+                assets.forEach(asset => {
+                    emergencySelect.innerHTML += `<option value=\"${asset.id}\">${asset.name} (${asset.type})</option>`;
+                });
+            }
+        } catch (error) {
+            console.error('Error loading asset dropdowns:', error);
+        }
+    }
+};

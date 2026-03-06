@@ -1,7 +1,7 @@
 {
-  "name": "urban-infra-backend",
+  "name": "infrabrain-ai",
   "version": "1.0.0",
-  "description": "Urban Infrastructure Data Portal Backend",
+  "description": "InfraBrain AI - Intelligent Infrastructure Governance Platform",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -19,6 +19,7 @@
     "jsonwebtoken": "^9.0.3",
     "pdfkit": "^0.15.2",
     "pg": "^8.19.0",
+    "simple-statistics": "^7.8.3",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
   },

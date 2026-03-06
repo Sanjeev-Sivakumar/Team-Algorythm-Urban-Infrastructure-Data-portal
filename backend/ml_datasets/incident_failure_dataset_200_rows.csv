@@ -1,0 +1,201 @@
+Incident_Type,Severity,Frequency,Location,Asset_Type,Weather_Condition_During_Failure,Root_Cause
+Surface Damage,Critical,8,Zone_A,Power Line,Storm,Overload Usage
+Traffic Damage,Critical,6,Zone_D,Power Line,Rain,Extreme Weather
+Surface Damage,Low,14,Zone_A,Street Light,Rain,Extreme Weather
+Leakage,High,3,Zone_C,Power Line,Storm,Material Defect
+Power Failure,Critical,13,Zone_C,Power Line,Clear,Extreme Weather
+Sensor Fault,Medium,14,Zone_E,Water Pipeline,Rain,Aging Infrastructure
+Power Failure,Medium,3,Zone_A,Power Line,Storm,Extreme Weather
+Sensor Fault,Medium,3,Zone_C,Street Light,Rain,Material Defect
+Traffic Damage,Critical,1,Zone_A,Bridge,Flood,Extreme Weather
+Sensor Fault,Medium,4,Zone_E,Bridge,Clear,Material Defect
+Traffic Damage,Critical,10,Zone_B,Road,Storm,Poor Maintenance
+Traffic Damage,Medium,8,Zone_C,Road,Storm,Material Defect
+Sensor Fault,Low,10,Zone_A,Power Line,Heatwave,Material Defect
+Leakage,Medium,3,Zone_B,Bridge,Flood,Poor Maintenance
+Surface Damage,High,2,Zone_D,Water Pipeline,Rain,Poor Maintenance
+Structural Crack,Medium,11,Zone_D,Street Light,Storm,Extreme Weather
+Surface Damage,High,13,Zone_A,Street Light,Storm,Human Error
+Traffic Damage,Low,2,Zone_E,Street Light,Flood,Aging Infrastructure
+Traffic Damage,Medium,11,Zone_B,Water Pipeline,Clear,Material Defect
+Power Failure,Low,10,Zone_D,Water Pipeline,Storm,Extreme Weather
+Sensor Fault,Low,1,Zone_A,Street Light,Flood,Overload Usage
+Power Failure,Medium,4,Zone_E,Water Pipeline,Rain,Poor Maintenance
+Power Failure,Critical,7,Zone_A,Road,Heatwave,Material Defect
+Surface Damage,Low,13,Zone_A,Bridge,Rain,Extreme Weather
+Structural Crack,High,7,Zone_D,Road,Storm,Aging Infrastructure
+Sensor Fault,Low,11,Zone_A,Bridge,Storm,Material Defect
+Structural Crack,Low,3,Zone_A,Street Light,Storm,Material Defect
+Traffic Damage,High,1,Zone_B,Power Line,Storm,Poor Maintenance
+Structural Crack,High,8,Zone_E,Water Pipeline,Clear,Overload Usage
+Leakage,Medium,12,Zone_D,Water Pipeline,Storm,Poor Maintenance
+Power Failure,Critical,6,Zone_E,Street Light,Storm,Human Error
+Structural Crack,Critical,11,Zone_C,Road,Heatwave,Human Error
+Sensor Fault,Low,14,Zone_B,Bridge,Heatwave,Human Error
+Power Failure,Critical,7,Zone_D,Power Line,Rain,Material Defect
+Surface Damage,Medium,2,Zone_D,Bridge,Storm,Material Defect
+Structural Crack,Low,2,Zone_B,Power Line,Heatwave,Material Defect
+Structural Crack,High,5,Zone_C,Street Light,Flood,Poor Maintenance
+Traffic Damage,Low,1,Zone_D,Bridge,Storm,Human Error
+Surface Damage,Low,7,Zone_D,Bridge,Storm,Overload Usage
+Surface Damage,Low,3,Zone_E,Bridge,Storm,Poor Maintenance
+Traffic Damage,Medium,9,Zone_B,Power Line,Storm,Extreme Weather
+Traffic Damage,Low,8,Zone_D,Street Light,Clear,Extreme Weather
+Power Failure,High,2,Zone_A,Street Light,Clear,Overload Usage
+Traffic Damage,Critical,2,Zone_D,Road,Rain,Overload Usage
+Surface Damage,Medium,13,Zone_D,Water Pipeline,Heatwave,Extreme Weather
+Structural Crack,Low,8,Zone_E,Bridge,Storm,Aging Infrastructure
+Leakage,Critical,5,Zone_E,Street Light,Storm,Aging Infrastructure
+Power Failure,High,2,Zone_A,Street Light,Storm,Aging Infrastructure
+Traffic Damage,Critical,12,Zone_A,Road,Heatwave,Poor Maintenance
+Leakage,High,3,Zone_E,Bridge,Flood,Material Defect
+Sensor Fault,High,6,Zone_D,Power Line,Flood,Overload Usage
+Sensor Fault,Critical,5,Zone_D,Street Light,Heatwave,Extreme Weather
+Leakage,Critical,1,Zone_C,Water Pipeline,Flood,Extreme Weather
+Surface Damage,High,3,Zone_E,Water Pipeline,Clear,Human Error
+Surface Damage,Medium,5,Zone_E,Street Light,Storm,Human Error
+Surface Damage,Low,3,Zone_C,Road,Rain,Poor Maintenance
+Traffic Damage,Medium,3,Zone_A,Road,Rain,Overload Usage
+Power Failure,Critical,4,Zone_D,Power Line,Clear,Human Error
+Traffic Damage,Medium,4,Zone_A,Road,Heatwave,Aging Infrastructure
+Leakage,High,6,Zone_A,Street Light,Rain,Human Error
+Sensor Fault,Critical,9,Zone_E,Street Light,Storm,Poor Maintenance
+Leakage,Low,8,Zone_B,Bridge,Rain,Overload Usage
+Sensor Fault,Critical,3,Zone_E,Street Light,Heatwave,Poor Maintenance
+Traffic Damage,Medium,10,Zone_A,Water Pipeline,Storm,Human Error
+Surface Damage,High,1,Zone_B,Road,Storm,Overload Usage
+Traffic Damage,Critical,10,Zone_C,Bridge,Clear,Material Defect
+Power Failure,Critical,9,Zone_C,Road,Clear,Poor Maintenance
+Power Failure,Critical,2,Zone_D,Power Line,Flood,Aging Infrastructure
+Sensor Fault,Critical,3,Zone_B,Street Light,Rain,Aging Infrastructure
+Traffic Damage,Medium,2,Zone_B,Power Line,Storm,Aging Infrastructure
+Sensor Fault,Medium,14,Zone_A,Power Line,Rain,Human Error
+Surface Damage,High,2,Zone_B,Power Line,Rain,Aging Infrastructure
+Traffic Damage,High,10,Zone_D,Street Light,Flood,Extreme Weather
+Power Failure,Medium,12,Zone_B,Water Pipeline,Heatwave,Aging Infrastructure
+Leakage,Low,9,Zone_A,Road,Rain,Human Error
+Power Failure,High,13,Zone_B,Water Pipeline,Rain,Poor Maintenance
+Surface Damage,Low,1,Zone_D,Power Line,Heatwave,Aging Infrastructure
+Sensor Fault,Medium,4,Zone_C,Street Light,Clear,Human Error
+Leakage,Low,6,Zone_A,Street Light,Rain,Aging Infrastructure
+Sensor Fault,High,6,Zone_A,Power Line,Heatwave,Poor Maintenance
+Surface Damage,Critical,9,Zone_B,Bridge,Storm,Overload Usage
+Surface Damage,Low,2,Zone_A,Road,Clear,Overload Usage
+Sensor Fault,Medium,10,Zone_E,Water Pipeline,Storm,Human Error
+Traffic Damage,High,6,Zone_E,Road,Rain,Human Error
+Leakage,Medium,6,Zone_C,Bridge,Rain,Human Error
+Structural Crack,High,13,Zone_A,Road,Rain,Extreme Weather
+Leakage,Low,4,Zone_A,Street Light,Heatwave,Aging Infrastructure
+Sensor Fault,High,4,Zone_D,Water Pipeline,Flood,Poor Maintenance
+Leakage,Critical,6,Zone_B,Road,Rain,Overload Usage
+Surface Damage,Critical,8,Zone_B,Water Pipeline,Storm,Extreme Weather
+Leakage,Medium,4,Zone_A,Power Line,Rain,Human Error
+Sensor Fault,Low,6,Zone_C,Water Pipeline,Storm,Poor Maintenance
+Traffic Damage,High,13,Zone_D,Bridge,Clear,Human Error
+Leakage,High,1,Zone_D,Road,Rain,Human Error
+Power Failure,High,3,Zone_B,Water Pipeline,Clear,Poor Maintenance
+Structural Crack,High,3,Zone_A,Road,Heatwave,Material Defect
+Sensor Fault,Low,9,Zone_E,Bridge,Clear,Material Defect
+Structural Crack,Medium,8,Zone_B,Street Light,Rain,Material Defect
+Surface Damage,High,12,Zone_B,Power Line,Rain,Poor Maintenance
+Structural Crack,High,3,Zone_E,Road,Flood,Extreme Weather
+Sensor Fault,High,4,Zone_E,Water Pipeline,Heatwave,Human Error
+Surface Damage,Critical,4,Zone_D,Road,Flood,Poor Maintenance
+Structural Crack,High,12,Zone_D,Water Pipeline,Flood,Human Error
+Traffic Damage,Medium,13,Zone_C,Street Light,Heatwave,Aging Infrastructure
+Sensor Fault,High,9,Zone_C,Road,Flood,Aging Infrastructure
+Sensor Fault,High,13,Zone_C,Road,Rain,Human Error
+Power Failure,Low,13,Zone_C,Water Pipeline,Heatwave,Poor Maintenance
+Structural Crack,High,3,Zone_E,Road,Flood,Overload Usage
+Power Failure,Medium,12,Zone_A,Power Line,Heatwave,Extreme Weather
+Leakage,Critical,1,Zone_B,Bridge,Rain,Poor Maintenance
+Sensor Fault,High,4,Zone_C,Bridge,Clear,Extreme Weather
+Traffic Damage,Critical,8,Zone_E,Power Line,Rain,Human Error
+Surface Damage,Medium,6,Zone_B,Bridge,Rain,Overload Usage
+Traffic Damage,High,14,Zone_E,Street Light,Heatwave,Material Defect
+Sensor Fault,High,11,Zone_E,Water Pipeline,Flood,Overload Usage
+Sensor Fault,High,2,Zone_B,Bridge,Flood,Human Error
+Leakage,Medium,8,Zone_C,Street Light,Flood,Extreme Weather
+Surface Damage,Critical,14,Zone_A,Street Light,Heatwave,Extreme Weather
+Power Failure,Medium,8,Zone_E,Street Light,Heatwave,Aging Infrastructure
+Sensor Fault,Low,8,Zone_E,Street Light,Flood,Poor Maintenance
+Power Failure,Medium,2,Zone_D,Street Light,Flood,Extreme Weather
+Power Failure,Low,3,Zone_D,Bridge,Heatwave,Poor Maintenance
+Traffic Damage,Medium,12,Zone_E,Bridge,Flood,Material Defect
+Surface Damage,High,1,Zone_B,Water Pipeline,Storm,Aging Infrastructure
+Power Failure,Critical,10,Zone_A,Street Light,Flood,Poor Maintenance
+Power Failure,High,10,Zone_B,Street Light,Clear,Extreme Weather
+Leakage,Medium,13,Zone_B,Power Line,Flood,Extreme Weather
+Structural Crack,High,2,Zone_D,Street Light,Heatwave,Aging Infrastructure
+Traffic Damage,Medium,6,Zone_C,Power Line,Heatwave,Human Error
+Traffic Damage,Critical,8,Zone_B,Power Line,Clear,Poor Maintenance
+Sensor Fault,High,1,Zone_A,Bridge,Storm,Aging Infrastructure
+Traffic Damage,Medium,4,Zone_D,Power Line,Storm,Aging Infrastructure
+Leakage,Critical,8,Zone_A,Power Line,Heatwave,Material Defect
+Sensor Fault,High,14,Zone_D,Road,Rain,Poor Maintenance
+Traffic Damage,Medium,10,Zone_C,Bridge,Clear,Material Defect
+Leakage,Medium,4,Zone_D,Power Line,Rain,Aging Infrastructure
+Surface Damage,Critical,7,Zone_A,Road,Clear,Human Error
+Traffic Damage,High,2,Zone_C,Bridge,Storm,Overload Usage
+Leakage,Medium,12,Zone_C,Bridge,Heatwave,Poor Maintenance
+Traffic Damage,Low,8,Zone_C,Bridge,Flood,Material Defect
+Structural Crack,Medium,14,Zone_D,Road,Storm,Human Error
+Power Failure,Critical,1,Zone_E,Water Pipeline,Clear,Aging Infrastructure
+Structural Crack,Medium,4,Zone_B,Power Line,Heatwave,Human Error
+Structural Crack,Low,1,Zone_C,Bridge,Clear,Human Error
+Surface Damage,Medium,4,Zone_A,Water Pipeline,Flood,Overload Usage
+Surface Damage,Critical,12,Zone_C,Road,Storm,Extreme Weather
+Structural Crack,Medium,4,Zone_B,Street Light,Rain,Material Defect
+Traffic Damage,Low,11,Zone_A,Power Line,Clear,Material Defect
+Traffic Damage,High,6,Zone_E,Power Line,Clear,Aging Infrastructure
+Traffic Damage,High,13,Zone_B,Water Pipeline,Clear,Poor Maintenance
+Power Failure,Medium,12,Zone_A,Bridge,Storm,Human Error
+Leakage,Low,9,Zone_C,Bridge,Clear,Extreme Weather
+Traffic Damage,Medium,14,Zone_B,Bridge,Flood,Material Defect
+Surface Damage,Critical,11,Zone_A,Bridge,Storm,Poor Maintenance
+Surface Damage,Critical,13,Zone_E,Bridge,Storm,Material Defect
+Traffic Damage,High,5,Zone_A,Street Light,Heatwave,Overload Usage
+Structural Crack,Critical,8,Zone_A,Water Pipeline,Heatwave,Aging Infrastructure
+Traffic Damage,Critical,6,Zone_D,Power Line,Clear,Extreme Weather
+Structural Crack,Critical,3,Zone_C,Bridge,Storm,Overload Usage
+Structural Crack,Critical,10,Zone_C,Power Line,Flood,Poor Maintenance
+Surface Damage,High,1,Zone_D,Water Pipeline,Flood,Extreme Weather
+Traffic Damage,Medium,6,Zone_C,Street Light,Heatwave,Aging Infrastructure
+Power Failure,Critical,13,Zone_A,Street Light,Clear,Overload Usage
+Power Failure,Critical,12,Zone_C,Bridge,Heatwave,Extreme Weather
+Leakage,Critical,4,Zone_C,Bridge,Rain,Extreme Weather
+Power Failure,Critical,6,Zone_B,Bridge,Heatwave,Aging Infrastructure
+Leakage,Critical,5,Zone_A,Power Line,Heatwave,Aging Infrastructure
+Power Failure,Critical,5,Zone_A,Street Light,Heatwave,Extreme Weather
+Sensor Fault,Low,8,Zone_A,Power Line,Flood,Human Error
+Structural Crack,High,9,Zone_B,Street Light,Rain,Overload Usage
+Sensor Fault,High,9,Zone_C,Bridge,Rain,Overload Usage
+Power Failure,High,2,Zone_E,Power Line,Clear,Aging Infrastructure
+Surface Damage,Medium,1,Zone_D,Bridge,Storm,Extreme Weather
+Traffic Damage,Critical,7,Zone_B,Road,Storm,Aging Infrastructure
+Leakage,Medium,12,Zone_B,Water Pipeline,Flood,Overload Usage
+Structural Crack,Medium,12,Zone_B,Street Light,Storm,Extreme Weather
+Leakage,Medium,13,Zone_B,Road,Rain,Aging Infrastructure
+Surface Damage,High,1,Zone_C,Water Pipeline,Heatwave,Extreme Weather
+Structural Crack,Critical,11,Zone_A,Water Pipeline,Flood,Aging Infrastructure
+Power Failure,Critical,6,Zone_A,Street Light,Rain,Overload Usage
+Surface Damage,Low,3,Zone_C,Bridge,Flood,Material Defect
+Surface Damage,Low,9,Zone_C,Water Pipeline,Heatwave,Poor Maintenance
+Structural Crack,High,12,Zone_D,Road,Rain,Aging Infrastructure
+Traffic Damage,High,7,Zone_C,Road,Flood,Poor Maintenance
+Leakage,High,6,Zone_A,Road,Clear,Material Defect
+Sensor Fault,Critical,5,Zone_D,Road,Heatwave,Extreme Weather
+Traffic Damage,Low,12,Zone_A,Water Pipeline,Flood,Material Defect
+Leakage,Critical,13,Zone_B,Road,Rain,Aging Infrastructure
+Surface Damage,Low,14,Zone_D,Street Light,Rain,Material Defect
+Leakage,High,4,Zone_B,Street Light,Storm,Aging Infrastructure
+Power Failure,Low,14,Zone_B,Bridge,Rain,Aging Infrastructure
+Traffic Damage,High,6,Zone_B,Water Pipeline,Rain,Extreme Weather
+Surface Damage,Critical,3,Zone_C,Bridge,Clear,Material Defect
+Sensor Fault,Medium,13,Zone_A,Road,Storm,Overload Usage
+Sensor Fault,High,14,Zone_E,Water Pipeline,Flood,Overload Usage
+Structural Crack,High,6,Zone_B,Street Light,Clear,Aging Infrastructure
+Leakage,High,13,Zone_C,Road,Storm,Poor Maintenance
+Traffic Damage,Low,6,Zone_D,Street Light,Heatwave,Extreme Weather
+Traffic Damage,Medium,8,Zone_B,Power Line,Clear,Extreme Weather
+Sensor Fault,High,6,Zone_A,Power Line,Rain,Overload Usage

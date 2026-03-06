@@ -10,6 +10,7 @@ const dashboardRoutes = require('./routes/dashboardRoutes');
 const exportRoutes = require('./routes/exportRoutes');
 const complaintRoutes = require('./routes/complaintRoutes');
 const advancedRoutes = require('./routes/advancedRoutes');
+const intelligenceRoutes = require('./routes/intelligenceRoutes');
 const authMiddleware = require('./middleware/auth');
 
 const app = express();
@@ -25,6 +26,7 @@ app.use('/api/dashboard', authMiddleware, dashboardRoutes);
 app.use('/api/export', authMiddleware, exportRoutes);
 app.use('/api/complaints', authMiddleware, complaintRoutes);
 app.use('/api/advanced', authMiddleware, advancedRoutes);
+app.use('/api/intelligence', authMiddleware, intelligenceRoutes);
 
 app.get('/', (req, res) => {
     res.send('🏙️ Urban Infrastructure Portal Backend is running');

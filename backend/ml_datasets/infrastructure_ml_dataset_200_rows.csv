@@ -1,0 +1,201 @@
+Asset_ID,Asset_Type,Age,Material_Type,Location,Maintenance_Frequency_per_year,Maintenance_Cost_USD,Incident_Count,Risk_Score,Failure_Occurred,Time_to_Failure_months
+A1000,Power Line,34,Asphalt,Zone_E,4,16024,0,19.45,1,112.8
+A1001,Street Light,6,Composite,Zone_D,4,19782,0,1.37,0,124.5
+A1002,Water Pipeline,22,Asphalt,Zone_D,1,577,1,50.31,1,67.4
+A1003,Street Light,11,Composite,Zone_D,3,8077,1,38.8,0,71.6
+A1004,Street Light,48,Asphalt,Zone_C,1,17484,3,83.72,1,32.6
+A1005,Bridge,16,PVC,Zone_E,4,14560,1,26.42,0,104.5
+A1006,Water Pipeline,33,Asphalt,Zone_D,5,17949,2,38.77,1,100.1
+A1007,Water Pipeline,9,Composite,Zone_C,4,19020,2,31.67,0,103.8
+A1008,Water Pipeline,6,Steel,Zone_B,5,11035,3,31.39,0,83.7
+A1009,Street Light,16,Asphalt,Zone_B,0,10010,4,73.01,1,35.8
+A1010,Power Line,29,Steel,Zone_C,4,7443,0,23.92,0,97.5
+A1011,Water Pipeline,3,PVC,Zone_C,0,12454,2,47.49,1,54.8
+A1012,Street Light,20,Concrete,Zone_E,3,8304,1,28.23,0,95.0
+A1013,Bridge,36,PVC,Zone_E,1,7065,3,68.2,0,50.3
+A1014,Power Line,19,Asphalt,Zone_B,5,6484,1,10.94,0,104.4
+A1015,Bridge,26,Steel,Zone_D,1,5170,1,47.11,0,56.9
+A1016,Power Line,3,Steel,Zone_B,0,19074,2,42.86,0,82.3
+A1017,Street Light,19,Composite,Zone_D,5,9684,2,21.88,0,92.8
+A1018,Road,20,Steel,Zone_D,1,19596,0,36.9,0,71.4
+A1019,Power Line,32,Composite,Zone_E,4,2692,1,40.16,0,51.1
+A1020,Bridge,7,Concrete,Zone_A,2,1748,4,58.79,1,60.9
+A1021,Street Light,41,Asphalt,Zone_A,0,11746,3,70.75,0,67.0
+A1022,Power Line,33,Composite,Zone_C,1,13290,0,38.85,1,97.8
+A1023,Road,40,Concrete,Zone_E,0,18881,1,66.7,0,48.7
+A1024,Road,39,Steel,Zone_D,0,4187,0,48.49,1,65.5
+A1025,Water Pipeline,18,Steel,Zone_A,5,4518,2,25.68,0,99.0
+A1026,Water Pipeline,40,Concrete,Zone_D,5,11802,1,34.75,0,75.3
+A1027,Bridge,1,Steel,Zone_A,2,2470,2,29.76,0,93.3
+A1028,Power Line,11,Concrete,Zone_A,4,8889,4,45.13,0,82.5
+A1029,Power Line,28,Composite,Zone_A,0,18086,0,40.13,0,92.1
+A1030,Water Pipeline,25,Composite,Zone_E,1,15874,2,51.99,1,67.0
+A1031,Power Line,23,Concrete,Zone_B,3,6288,2,43.4,0,74.6
+A1032,Power Line,31,Composite,Zone_D,0,5908,1,48.64,1,62.6
+A1033,Road,30,Composite,Zone_E,0,9946,0,50.2,0,61.5
+A1034,Water Pipeline,42,Composite,Zone_E,2,1422,3,67.1,1,50.6
+A1035,Street Light,35,PVC,Zone_E,4,919,3,53.76,0,69.9
+A1036,Water Pipeline,7,Asphalt,Zone_E,3,19088,2,33.32,1,95.8
+A1037,Street Light,16,Steel,Zone_E,5,11289,0,16.42,1,95.5
+A1038,Road,26,PVC,Zone_C,5,1620,1,24.23,0,110.7
+A1039,Bridge,48,Composite,Zone_D,1,11760,2,66.65,1,50.6
+A1040,Power Line,49,Concrete,Zone_E,3,17834,5,82.01,1,37.8
+A1041,Road,2,Composite,Zone_D,5,2836,2,19.92,1,92.6
+A1042,Power Line,1,Asphalt,Zone_C,1,5873,3,48.84,0,46.9
+A1043,Bridge,48,Composite,Zone_C,4,2743,2,51.0,0,77.8
+A1044,Bridge,12,Concrete,Zone_D,1,19529,2,43.69,1,83.7
+A1045,Road,5,Asphalt,Zone_A,5,5112,5,39.69,1,77.5
+A1046,Bridge,37,Composite,Zone_B,2,14446,4,65.19,1,55.5
+A1047,Street Light,32,Asphalt,Zone_A,2,18749,2,61.95,0,63.2
+A1048,Bridge,9,Steel,Zone_A,2,11604,0,17.18,0,87.2
+A1049,Power Line,41,Steel,Zone_A,5,13929,3,45.14,1,69.6
+A1050,Power Line,35,Composite,Zone_E,2,6871,2,51.41,1,76.5
+A1051,Power Line,19,Asphalt,Zone_C,3,6859,3,51.87,1,55.6
+A1052,Power Line,48,Concrete,Zone_A,4,8363,1,41.33,0,81.6
+A1053,Street Light,16,Composite,Zone_C,1,3728,1,47.84,0,58.6
+A1054,Water Pipeline,3,Steel,Zone_D,1,14882,5,62.43,1,62.2
+A1055,Road,20,Steel,Zone_B,5,19255,3,37.39,1,82.3
+A1056,Power Line,24,Composite,Zone_D,2,3391,4,60.22,1,43.6
+A1057,Bridge,33,Asphalt,Zone_D,2,4256,2,64.53,0,67.1
+A1058,Power Line,24,Steel,Zone_E,0,16270,1,46.46,1,66.2
+A1059,Bridge,11,Asphalt,Zone_B,4,16978,1,22.15,0,89.7
+A1060,Bridge,49,Steel,Zone_D,3,3174,0,44.57,0,77.4
+A1061,Power Line,8,Steel,Zone_D,1,7398,0,30.87,0,100.6
+A1062,Street Light,36,PVC,Zone_B,0,10647,3,74.67,1,35.2
+A1063,Bridge,38,Steel,Zone_B,0,1293,3,76.15,1,44.5
+A1064,Bridge,40,Concrete,Zone_D,5,2616,4,56.22,0,68.1
+A1065,Power Line,20,Composite,Zone_B,1,6279,2,51.26,0,75.7
+A1066,Bridge,35,Composite,Zone_D,5,12798,4,57.82,0,63.9
+A1067,Bridge,48,Asphalt,Zone_D,3,14653,1,59.85,1,56.5
+A1068,Power Line,25,Steel,Zone_E,0,11611,2,58.21,1,53.5
+A1069,Power Line,35,Concrete,Zone_A,0,11289,0,44.15,0,76.7
+A1070,Road,25,Asphalt,Zone_D,4,11897,5,60.56,0,48.7
+A1071,Street Light,29,PVC,Zone_C,3,13499,2,58.3,1,32.5
+A1072,Street Light,18,Asphalt,Zone_A,0,1314,2,52.78,0,71.6
+A1073,Bridge,46,Asphalt,Zone_A,3,17229,3,71.8,1,57.2
+A1074,Street Light,18,Steel,Zone_A,1,11041,2,59.19,1,37.2
+A1075,Bridge,2,PVC,Zone_E,2,2943,6,64.43,0,45.5
+A1076,Road,35,Asphalt,Zone_D,0,10957,2,69.84,0,56.4
+A1077,Power Line,16,Concrete,Zone_E,4,10880,2,39.74,0,100.8
+A1078,Power Line,41,Concrete,Zone_D,1,8283,2,62.7,1,57.5
+A1079,Power Line,36,Composite,Zone_E,3,11973,3,56.58,1,56.1
+A1080,Street Light,33,PVC,Zone_E,5,17868,3,40.89,0,77.3
+A1081,Road,4,PVC,Zone_C,1,15828,3,45.33,1,88.4
+A1082,Street Light,33,Composite,Zone_E,0,1327,6,94.55,1,19.0
+A1083,Street Light,14,Asphalt,Zone_B,3,7647,1,22.28,0,89.7
+A1084,Road,21,PVC,Zone_C,2,4951,2,46.77,1,68.4
+A1085,Road,48,Concrete,Zone_E,1,15843,1,56.95,0,53.5
+A1086,Road,20,Concrete,Zone_A,0,14135,2,59.17,0,62.1
+A1087,Road,8,Steel,Zone_B,4,6459,3,27.02,1,109.2
+A1088,Power Line,7,PVC,Zone_B,5,626,3,29.85,1,93.4
+A1089,Water Pipeline,3,Asphalt,Zone_B,3,9295,2,33.97,1,83.5
+A1090,Water Pipeline,17,Composite,Zone_C,1,12141,1,32.23,0,84.9
+A1091,Road,33,Composite,Zone_E,1,7696,4,77.67,1,26.7
+A1092,Water Pipeline,48,Asphalt,Zone_E,2,12059,1,60.94,1,67.9
+A1093,Water Pipeline,12,Steel,Zone_A,2,3868,2,35.15,0,84.1
+A1094,Road,22,Composite,Zone_A,4,4297,2,43.56,0,74.6
+A1095,Water Pipeline,22,PVC,Zone_B,5,15614,2,31.3,0,120.6
+A1096,Street Light,46,Steel,Zone_A,4,14218,0,30.07,0,92.9
+A1097,Bridge,30,PVC,Zone_C,0,2292,4,79.72,1,32.8
+A1098,Bridge,38,Concrete,Zone_E,0,11553,1,63.59,0,52.1
+A1099,Road,38,Steel,Zone_B,4,3976,0,29.18,0,102.3
+A1100,Power Line,45,Composite,Zone_A,5,3917,2,45.69,0,75.4
+A1101,Road,8,Steel,Zone_C,4,2145,2,22.2,0,83.4
+A1102,Power Line,27,Steel,Zone_C,5,15255,3,41.05,0,88.1
+A1103,Bridge,27,Steel,Zone_A,5,19914,2,25.13,0,88.2
+A1104,Road,34,Steel,Zone_E,3,19756,0,31.84,1,106.9
+A1105,Street Light,21,PVC,Zone_A,5,3572,2,24.08,0,106.7
+A1106,Water Pipeline,30,Concrete,Zone_B,2,2354,2,48.32,0,67.2
+A1107,Power Line,33,Asphalt,Zone_A,5,5162,3,49.98,0,82.8
+A1108,Water Pipeline,28,Steel,Zone_C,5,7014,2,38.26,1,82.4
+A1109,Water Pipeline,47,Composite,Zone_A,5,3208,2,47.25,1,81.3
+A1110,Road,33,Steel,Zone_E,0,12194,0,44.34,1,80.5
+A1111,Water Pipeline,5,Composite,Zone_D,2,10024,3,43.42,0,68.1
+A1112,Street Light,48,PVC,Zone_A,2,6956,3,76.87,0,36.7
+A1113,Water Pipeline,19,Composite,Zone_E,4,4712,4,50.11,1,80.2
+A1114,Road,4,Asphalt,Zone_E,3,13724,0,26.0,0,90.7
+A1115,Street Light,35,Concrete,Zone_C,5,8470,4,54.97,0,61.0
+A1116,Bridge,49,Composite,Zone_E,1,17420,0,54.36,0,56.1
+A1117,Water Pipeline,17,Composite,Zone_E,3,2125,2,36.65,0,87.6
+A1118,Road,44,Concrete,Zone_E,3,10814,1,47.07,0,93.6
+A1119,Bridge,28,Asphalt,Zone_E,2,8473,2,50.04,0,59.3
+A1120,Bridge,30,Steel,Zone_B,3,9077,2,49.54,1,70.7
+A1121,Power Line,29,Composite,Zone_B,5,8570,0,22.18,0,111.9
+A1122,Street Light,46,Concrete,Zone_C,5,9166,2,39.67,0,79.5
+A1123,Water Pipeline,6,PVC,Zone_A,0,4100,4,58.94,0,65.6
+A1124,Road,35,Concrete,Zone_E,5,7283,1,19.82,0,89.6
+A1125,Power Line,41,PVC,Zone_A,5,13726,2,43.14,0,81.1
+A1126,Street Light,37,Asphalt,Zone_A,2,9646,3,58.68,1,59.4
+A1127,Power Line,24,Steel,Zone_C,5,5471,0,3.64,0,126.2
+A1128,Street Light,29,Concrete,Zone_E,0,13990,2,65.34,1,66.5
+A1129,Street Light,49,Composite,Zone_E,1,18089,1,73.86,1,72.0
+A1130,Water Pipeline,46,Asphalt,Zone_D,2,13451,0,45.57,0,80.2
+A1131,Street Light,31,Concrete,Zone_A,1,12812,1,54.79,0,68.5
+A1132,Power Line,35,Composite,Zone_A,2,2490,3,63.41,1,58.5
+A1133,Street Light,33,Concrete,Zone_B,4,5799,1,33.31,0,83.2
+A1134,Water Pipeline,21,PVC,Zone_D,3,13497,2,45.2,0,78.2
+A1135,Water Pipeline,32,Concrete,Zone_B,4,13972,1,31.75,1,85.3
+A1136,Power Line,23,Concrete,Zone_B,5,4880,5,55.14,0,66.5
+A1137,Bridge,33,Concrete,Zone_B,1,5257,1,53.41,0,79.8
+A1138,Bridge,3,Asphalt,Zone_C,5,19597,4,30.46,0,79.5
+A1139,Street Light,18,Concrete,Zone_C,3,10895,2,43.76,1,87.6
+A1140,Road,25,Composite,Zone_B,2,16741,0,32.13,0,101.0
+A1141,Street Light,42,PVC,Zone_D,3,6088,1,41.42,0,77.4
+A1142,Power Line,31,PVC,Zone_A,0,17850,3,75.28,1,23.5
+A1143,Power Line,3,Concrete,Zone_D,3,5444,2,25.31,1,88.6
+A1144,Power Line,40,Asphalt,Zone_E,0,13895,3,78.14,1,54.8
+A1145,Power Line,46,Asphalt,Zone_C,3,17572,3,63.55,1,56.2
+A1146,Power Line,24,Composite,Zone_A,0,4743,1,57.83,0,52.2
+A1147,Water Pipeline,32,Concrete,Zone_A,1,10416,0,45.57,1,69.4
+A1148,Bridge,47,PVC,Zone_E,5,10484,1,36.07,0,92.3
+A1149,Power Line,22,Asphalt,Zone_E,5,2259,4,49.29,1,76.2
+A1150,Road,23,Concrete,Zone_B,4,9681,2,42.75,1,74.9
+A1151,Road,2,Asphalt,Zone_C,5,2982,4,35.99,1,80.3
+A1152,Road,27,Asphalt,Zone_C,2,1451,3,58.25,1,57.8
+A1153,Road,42,PVC,Zone_D,3,2579,2,46.64,0,64.1
+A1154,Water Pipeline,2,Steel,Zone_B,4,3217,3,25.87,0,110.3
+A1155,Road,26,Composite,Zone_B,2,10192,2,48.07,1,68.7
+A1156,Power Line,17,Composite,Zone_B,2,7811,2,41.15,0,91.0
+A1157,Street Light,40,PVC,Zone_B,0,18949,2,69.07,0,66.1
+A1158,Road,33,Asphalt,Zone_C,5,1268,3,44.08,0,85.9
+A1159,Water Pipeline,9,Concrete,Zone_C,1,5990,1,40.05,0,75.6
+A1160,Water Pipeline,43,Asphalt,Zone_B,1,16034,2,65.45,1,58.6
+A1161,Road,48,PVC,Zone_D,4,7145,3,61.23,1,58.5
+A1162,Street Light,39,Composite,Zone_A,1,5732,2,63.72,0,47.2
+A1163,Road,29,Asphalt,Zone_A,3,11985,0,19.52,1,103.7
+A1164,Water Pipeline,42,Composite,Zone_D,1,6297,1,52.5,0,55.7
+A1165,Bridge,26,Concrete,Zone_B,4,12842,2,36.88,1,95.0
+A1166,Power Line,35,Composite,Zone_C,1,8538,2,54.95,0,60.4
+A1167,Water Pipeline,25,Composite,Zone_A,3,16502,1,38.0,1,84.0
+A1168,Road,24,Steel,Zone_E,0,13587,0,52.05,0,70.8
+A1169,Power Line,13,Steel,Zone_E,4,5373,5,59.89,1,57.5
+A1170,Road,7,Steel,Zone_D,0,1981,2,49.13,0,76.7
+A1171,Road,36,Composite,Zone_B,0,10593,1,67.05,1,48.2
+A1172,Bridge,45,PVC,Zone_A,0,14922,2,73.74,1,55.0
+A1173,Power Line,20,Composite,Zone_B,2,16938,0,28.31,0,78.2
+A1174,Power Line,1,PVC,Zone_A,5,8143,2,13.53,0,107.7
+A1175,Bridge,8,PVC,Zone_D,2,16208,1,29.29,0,110.1
+A1176,Water Pipeline,46,Steel,Zone_D,5,11771,3,49.66,0,60.3
+A1177,Road,16,Asphalt,Zone_E,0,17716,4,72.45,0,40.8
+A1178,Street Light,14,Concrete,Zone_B,4,13100,2,31.2,1,93.9
+A1179,Road,12,Steel,Zone_E,5,11498,0,7.22,0,114.6
+A1180,Road,23,Steel,Zone_B,3,14795,2,43.98,0,79.5
+A1181,Water Pipeline,15,Asphalt,Zone_E,3,11182,2,42.95,1,81.9
+A1182,Road,28,Concrete,Zone_C,1,16880,3,69.55,1,56.8
+A1183,Bridge,34,Composite,Zone_C,5,9019,5,52.98,1,78.1
+A1184,Bridge,2,Composite,Zone_C,4,3800,2,10.43,0,113.7
+A1185,Power Line,32,Steel,Zone_C,2,7222,3,65.87,0,51.7
+A1186,Street Light,23,Concrete,Zone_A,0,7718,3,60.97,0,65.8
+A1187,Road,22,Steel,Zone_C,1,3554,2,52.08,1,86.9
+A1188,Road,25,PVC,Zone_D,3,14075,5,61.15,1,57.5
+A1189,Water Pipeline,22,Steel,Zone_D,2,8470,2,38.19,1,72.1
+A1190,Bridge,22,Steel,Zone_A,2,2643,5,73.91,1,57.2
+A1191,Street Light,49,Composite,Zone_C,0,10003,0,63.2,1,55.6
+A1192,Power Line,42,Composite,Zone_C,5,15649,1,30.32,1,68.0
+A1193,Bridge,6,Composite,Zone_C,3,19422,1,10.64,0,117.8
+A1194,Power Line,15,PVC,Zone_E,4,12675,2,28.27,0,86.4
+A1195,Water Pipeline,43,Composite,Zone_B,2,8856,1,53.76,0,65.3
+A1196,Water Pipeline,37,Concrete,Zone_E,0,15570,1,52.81,0,70.5
+A1197,Road,33,Asphalt,Zone_B,4,1322,0,26.72,0,95.2
+A1198,Street Light,8,Concrete,Zone_C,5,17827,3,28.72,0,98.4
+A1199,Power Line,44,Concrete,Zone_C,3,14789,3,65.3,1,50.3

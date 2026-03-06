@@ -7,5 +7,6 @@ const authenticate = require('../middleware/auth');
  * Dashboard Overview (All authenticated users)
  */
 router.get('/', authenticate, dashboardController.getDashboardStats);
+router.get('/stats', authenticate, dashboardController.getDashboardStats);
 
 module.exports = router;
